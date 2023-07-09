@@ -1,5 +1,6 @@
 package com.fran.pruebams.presentation.controller;
 
+import com.fran.pruebams.application.dto.UserDto;
 import com.fran.pruebams.application.mapper.UserCsvConverter;
 import com.fran.pruebams.application.service.UserService;
 import com.fran.pruebams.domain.model.User;
@@ -27,7 +28,7 @@ public class UserController {
 
     @GetMapping
     public void getAllUsers(HttpServletResponse response) throws IOException {
-        List<User> users = userService.getAllUsers();
+        List<UserDto> users = userService.getAllUsers();
 
         response.setContentType("text/csv");
         response.setHeader(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=users.csv");

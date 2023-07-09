@@ -26,9 +26,4 @@ public class JpaUserRepository implements UserRepository {
                 .collect(Collectors.toList());
     }
 
-    @Override
-    public void save(User user) {
-        UserEntity userEntity = userMapper.toEntity(user);
-        userJpaRepository.save(userEntity);
-    }
 }
