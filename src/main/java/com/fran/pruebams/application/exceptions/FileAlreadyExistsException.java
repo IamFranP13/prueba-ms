@@ -1,6 +1,6 @@
 package com.fran.pruebams.application.exceptions;
 
-public class FileAlreadyExistsException {
+public class FileAlreadyExistsException extends RuntimeException{
     public FileAlreadyExistsException(String message) {
         super();
     }
@@ -8,4 +8,5 @@ public class FileAlreadyExistsException {
     public FileAlreadyExistsException(String message, Throwable cause) {
         super();
     }
+
 }
