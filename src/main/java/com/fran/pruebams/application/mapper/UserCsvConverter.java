@@ -11,9 +11,11 @@ import java.util.stream.Collectors;
 public class UserCsvConverter {
     public void convertUsersToCsv(List<UserDto> users, PrintWriter writer) {
         String csv = users.stream()
-                .map(user -> user.getFullname() + "," + user.getPhone() + "," + user.getAddress())
+                .map(user -> user.getFullname().replace(",", "") + "," + user.getPhone() + ","
+                        + user.getAddress().replace(",", ""))
                 .collect(Collectors.joining("\n"));
 
         writer.write(csv);
     }
 }
+
