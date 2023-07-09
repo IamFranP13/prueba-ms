@@ -1,6 +1,6 @@
 package com.fran.pruebams.infrastructure.persistence.repository;
 
-import com.fran.pruebams.application.UserMapper;
+import com.fran.pruebams.application.mapper.UserMapper;
 import com.fran.pruebams.domain.model.User;
 import com.fran.pruebams.domain.repository.UserRepository;
 import com.fran.pruebams.infrastructure.persistence.entity.UserEntity;

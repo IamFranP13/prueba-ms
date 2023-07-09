@@ -1,4 +1,4 @@
-package com.fran.pruebams.application;
+package com.fran.pruebams.application.mapper;
 
 import com.fran.pruebams.domain.model.User;
 import com.fran.pruebams.infrastructure.persistence.entity.UserEntity;
