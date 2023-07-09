@@ -42,7 +42,7 @@ public class FileService {
                     }
                     Files.copy(in, path);
                 } catch (IOException e) {
-                    // Log this exception
+
                     e.printStackTrace();
                 }
             });
@@ -51,7 +51,7 @@ public class FileService {
                 try {
                     IOUtils.copy(file.getInputStream(), out);
                 } catch (IOException e) {
-                    // Log this exception
+
                     e.printStackTrace();
                 } finally {
                     try {
