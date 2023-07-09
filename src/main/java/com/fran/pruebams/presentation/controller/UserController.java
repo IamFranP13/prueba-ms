@@ -3,6 +3,7 @@ package com.fran.pruebams.presentation.controller;
 import com.fran.pruebams.application.dto.UserDto;
 import com.fran.pruebams.application.mapper.UserCsvConverter;
 import com.fran.pruebams.application.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,7 @@ public class UserController {
         this.userCsvConverter = userCsvConverter;
     }
 
+    @Operation(summary = "Get all users in CSV format")
     @GetMapping
     public void getAllUsers(HttpServletResponse response) throws IOException {
         List<UserDto> users = userService.getAllUsers();
