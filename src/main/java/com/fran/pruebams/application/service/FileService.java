@@ -16,8 +16,7 @@ import java.nio.file.Paths;
 public class FileService {
 
     public boolean fileExists(MultipartFile file) {
-        String directory = "files";
-        Path dirPath = Paths.get(directory);
+
         Path path = Paths.get("files/" + file.getOriginalFilename());
         return Files.exists(path);
     }
@@ -66,7 +65,6 @@ public class FileService {
             readerThread.start();
 
         } catch (IOException e) {
-            // Log this exception
             e.printStackTrace();
         }
     }

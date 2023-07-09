@@ -1,6 +1,5 @@
 package com.fran.pruebams.presentation.controller;
 
-import com.fran.pruebams.application.exceptions.FileAlreadyExistsException;
 import com.fran.pruebams.application.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -5,8 +5,6 @@ public class FileAlreadyExistsException extends RuntimeException{
         super();
     }
 
-    public FileAlreadyExistsException(String message, Throwable cause) {
-        super();
-    }
+
 
 }

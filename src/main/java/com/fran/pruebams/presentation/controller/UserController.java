@@ -3,7 +3,6 @@ package com.fran.pruebams.presentation.controller;
 import com.fran.pruebams.application.dto.UserDto;
 import com.fran.pruebams.application.mapper.UserCsvConverter;
 import com.fran.pruebams.application.service.UserService;
-import com.fran.pruebams.domain.model.User;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -14,11 +14,4 @@ public class UserMapper {
                 .build();
     }
 
-    public UserEntity toEntity(User user) {
-        return UserEntity.builder()
-                .fullname(user.getFullname())
-                .phone(user.getPhone())
-                .address(user.getAddress())
-                .build();
-    }
 }
