@@ -1,5 +1,6 @@
 package com.fran.pruebams.application.service;
 
+import com.fran.pruebams.application.exceptions.FileAlreadyExistsException;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,7 @@ public class FileService {
     }
 
     @Async
-    public void saveFile(MultipartFile file) throws com.fran.pruebams.application.exceptions.FileAlreadyExistsException {
+    public void saveFile(MultipartFile file) throws FileAlreadyExistsException {
         try {
             PipedInputStream in = new PipedInputStream();
             PipedOutputStream out = new PipedOutputStream(in);
@@ -37,7 +38,7 @@ public class FileService {
                 try (in) {
                     Path path = Paths.get("files/" + file.getOriginalFilename());
                     if (Files.exists(path)) {
-                        throw new com.fran.pruebams.application.exceptions.FileAlreadyExistsException("File already exists");
+                        throw new FileAlreadyExistsException("File already exists");
                     }
                     Files.copy(in, path);
                 } catch (IOException e) {
